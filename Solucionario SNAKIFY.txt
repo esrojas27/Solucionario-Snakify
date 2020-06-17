@@ -1,0 +1,1043 @@
+Solucionario Snakify
+
+02_01
+n=int(input())
+print(n%10)
+
+02_02
+a = int(input())
+print(a//10%10)
+
+02_04
+
+from math import floor
+a=float(input())
+print(a-floor(a))
+
+
+
+ 02_05
+
+a = int(input())
+b = int(input())
+c = int(input())
+if a <= b and a <= c:
+    print(a)
+elif b <= a and b <= c:
+    print(b)
+else:
+    print(c)
+
+
+ 02_06_num_equal.py
+a = int(input())
+b = int(input())
+c = int(input())
+if a == b == c:
+    print(3)
+elif a == b or b == c or a == c:
+    print(2)
+else:
+    print(0)
+
+
+ 02_07_rook_move.py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if x1 == x2 or y1 == y2:
+    print('YES')
+else:
+    print('NO')
+
+
+
+ 02_08_king_move.py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if x1 - x2 < 2 and y1 - y2 < 2 and x1 - x2 > -2 and y1 - y2 > -2 :
+    print('YES')
+else:
+    print('NO')
+
+
+
+ 02_09_bishop_move.py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if x1 - x2 == y1 - y2 or x1 - x2 == y2 - y1:
+    print('YES')
+else:
+    print('NO')
+
+
+
+ 02_10_queen_move.py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if x1 == x2 or y1 == y2 or x1 - x2 == y1 - y2 or x1 - x2 == y2 - y1:
+    print('YES')
+else:
+    print('NO')
+
+
+
+ 02_12_chocolate.py
+
+
+n = int(input())
+m = int(input())
+k = int(input())
+if k <= n * m and (k % n == 0 or k % m == 0):
+    print('YES')
+else:
+    print('NO')
+
+
+ 02_13_jacob_the_swimmer
+N = int(input())
+M = int(input())
+x = int(input())
+y = int(input())
+if M < N:
+    if M - x < x:
+        x = M - x
+    if N - y < y:
+        y = N - y
+else:
+    if N - x < x:
+        x = N - x
+    if M - y < y:
+        y = M - y
+if x < y:
+    print(x)
+else:
+    print(y)
+
+
+ 02_11_knight_move.py
+x1 = int(input())
+y1 = int(input())
+x2 = int(input())
+y2 = int(input())
+if abs(x1 - x2) == 2 and abs(y1 - y2) == 1 or abs(x1 - x2) == 1 and abs(y1 - y2) == 2:
+    print('YES')
+else:
+    print('NO')
+
+
+ 03_01
+a=int(input())
+b=int(input())
+if a<b:
+    print(a) 
+else:
+    print(b)
+
+
+ 03_02_mkad.py
+v = int(input())
+t = int(input())
+print(v * t % 109)
+
+
+ 03_03_fractional_part.py
+x = float(input())
+print(x - int(x))
+
+
+ 03_04_digit_after_separator.py
+x = float(input())
+print(int(x * 10) % 10)
+
+
+ 03_05_konec_urokov.py
+n = int(input())
+sb = n // 2
+lb = n - sb - 1
+t = n * 45 + sb * 5 + lb * 15
+print(t // 60 + 9, t % 60)
+
+
+ 03_06_motor_rally.py
+from math import ceil
+
+n = int(input())
+m = int(input())
+print(ceil(m / n))
+
+
+ 03_07_purchase_price.py
+a = int(input())
+b = int(input())
+n = int(input())
+print((a * 100 + b ) * n // 100, n * b % 100)
+
+
+ 03_08_raznost_vremen.py
+h1 = int(input())
+m1 = int(input())
+s1 = int(input())
+h2 = int(input())
+m2 = int(input())
+s2 = int(input())
+print(h2*60*60 + m2*60 + s2 - (h1*60*60 + m1*60 + s1))
+
+
+ 03_09_ulitka.py
+from math import ceil
+h = int(input())
+a = int(input())
+b = int(input())
+print(ceil((h-a)/(a-b))+1)
+
+
+ 03_10_tens_digit.py
+n = int(input())
+print(n//10%10)
+
+
+ 03_11_sum_of_digits.py
+n = int(input())
+print(n%10 + n//10%10 + n//100)
+
+
+ 03_12_hypot.py
+from math import sqrt
+a = int(input())
+b = int(input())
+print(sqrt(a**2+b**2))
+
+
+ 03_13_russian_round.py
+x = float(input())
+if x*10%10 == 5:
+    print(round(x+0.1))
+else:
+    print(round(x))
+
+
+ 03_14_watch_1.py
+H = int(input())
+M = int(input())
+S = int(input())
+print(360/12*H + 360/12/60*M + 360/12/60/60*S)
+
+
+ 03_15_watch_2.py
+alfa = float(input())
+sec = alfa/360*12*60*60
+hours = sec//3600
+speed = 360/60/60 # minit arrow per second
+print((sec-hours*3600)*speed)
+
+
+ 03_16_watch_3.py
+alfa = float(input())
+S = alfa / 360 * 12 * 60 * 60
+H = S // 3600
+M = S % 3600 // 60
+print(int(H), int(M), int(S%60))
+
+
+ 03_17_percents.py
+P = int(input())
+X = int(input())
+Y = int(input())
+Z = X * 100 + Y
+R = Z + Z / 100 * P
+print(int(R // 100) , int(R % 100))
+
+
+ 04_01_series_1.py
+A = int(input())
+B = int(input())
+for i in range(A, B + 1):
+    print(i)
+
+
+ 04_02_series_2.py
+A = int(input())
+B = int(input())
+if A < B:
+    for i in range(A, B + 1):
+        print(i, end=' ')
+else:
+    for i in range(A, B - 1, -1):
+        print(i, end=' ')
+
+
+ 04_03_series_3.py
+A = int(input())
+B = int(input())
+for i in range(A + A % 2 - 1, B - 1, -2):
+    print(i, end=' ')
+
+
+ 04_04_sum_of_ten_numbers.py
+S = 0
+for i in range(0, 10):
+    n = int(input())
+    S += n
+print(S)
+
+
+ 04_05_sum_of_n_numbers.py
+N = int(input())
+S = 0
+for i in range(N):
+    S += int(input())
+print(S)
+
+
+ 04_06_sum_of_cubes.py
+n = int(input())
+S = 0
+for i in range(1, n +1):
+    S += i**3
+print(S)
+
+
+ 04_07_factorial.py
+n = int(input())
+f = 1
+for i in range(1, n +1):
+    f *= i
+print(f)
+
+
+ 04_08_sum_of_factorials.py
+n = int(input())
+f = 1
+S = 0
+for i in range(1, n +1):
+    f *= i
+    S += f
+print(S)
+
+
+ 04_09_how_many_zeroes.py
+counter = 0
+for i in range(int(input())):
+    if int(input()) == 0:
+        counter += 1
+print(counter)
+
+
+ 04_10_ladder.py
+n = int(input())
+for i in range(1, n + 1):
+    for j in range(1, i + 1):
+        print(j, end='')
+    print()
+
+
+ 04_11_lost_card.py
+n = int(input())
+s = (n + 1) * n / 2
+for i in range(n-1):
+    s -= int(input())
+print(int(s))
+
+
+ 05_01_slices.py
+s = input()
+print(s[2])
+print(s[-2])
+print(s[:5])
+print(s[:-2])
+print(s[::2])
+print(s[1::2])
+print(s[::-1])
+print(s[::-2])
+print(len(s))
+
+
+ 05_02_num_words.py
+print(input().count(' ') + 1)
+
+
+ 05_03_two_halves.py
+s = input()
+l = int(len(s)/2)
+print(s[-l:]+s[:-l])
+
+
+ 05_04_swap_two_words.py
+s = input()
+n = s.find(' ')
+print(s[n:], s[:n])
+
+
+ 05_05_first_and_last_occurences.py
+s = input()
+с = s.count('f')
+if с == 1:
+    print(s.find('f'))
+if с > 1:
+    print(s.find('f'),s.rfind('f'))
+
+
+ 05_06_second_occurence.py
+s = input()
+с = s.count('f')
+if с == 0:
+    print(-2)
+if с == 1:
+    print(-1)
+if с > 1:
+    print(s.find('f', s.find('f') + 1))
+
+
+ 05_07_delete_chunk.py
+s = input()
+print(s[:s.find('h')] + s[s.rfind('h')+1:])
+
+
+ 05_08_reverse_chunk.py
+s = input()
+i = s[s.find('h'):(s.rfind('h'))]
+print(s[:s.find('h') + 1] + i[::-1] + s[s.rfind('h')+1:])
+
+
+ 05_09_replace_substring.py
+print(input().replace('1', 'one'))
+
+
+ 05_10_delete_char.py
+print(input().replace('@', ''))
+
+
+ 05_11_replace_in_chunk.py
+s = input()
+i = s[s.find('h')+1:(s.rfind('h'))]
+print(s[:s.find('h')+1] + i.replace('h', 'H') + s[s.rfind('h'):])
+
+
+ 05_12_delete_every_third_char.py
+s = input()
+result = ''
+for i in range(1,len(s),3):
+    result += s[i:i+2]
+print(result)
+
+
+ 06_01_list_of_squares.py
+N = int(input())
+i = 1
+while i**2 <= N:
+    print(i**2)
+    i += 1
+
+
+ 06_02_minimal_divisor.py
+n = int(input())
+i = 2
+while n % i != 0:
+    i += 1
+print(i)
+
+
+ 06_03_powers_of_two.py
+N = int(input())
+i, p = 0, 1
+while p * 2 <= N:
+    i, p = i + 1, p * 2
+print(i, p)
+
+
+ 06_04_running.py
+x = int(input())
+y = int(input())
+i = 1
+while x < y:
+    x *= 1.1
+    i += 1
+print(i)
+
+
+ 06_05_bank_interest.py
+x = int(input())
+p = int(input())
+y = int(input())
+i = 0
+while x < y:
+    x += x * p / 100 # alternative variant: x *= 1 + p / 100
+    x = int(x * 100) / 100
+    i += 1
+print(i)
+
+
+ 06_06_seq_len.py
+i = 0
+while int(input()) != 0:
+    i += 1
+print(i)
+
+
+ 06_07_seq_sum.py
+S = 0
+a = int(input())
+while a != 0:
+    S += a
+    a = int(input())
+print(S)
+
+
+ 06_08_seq_avg.py
+S = 0
+n = 0
+a = int(input())
+while a != 0:
+    S += a
+    n += 1
+    a = int(input())
+print(S/n)
+
+
+ 06_09_seq_max.py
+max = 0
+a = int(input())
+while a != 0:
+    if a > max:
+        max = a
+    a = int(input())
+print(max)
+
+
+ 06_10_seq_index_of_max.py
+max = 0
+i = 0
+max_i = 0
+a = int(input())
+while a != 0:
+    if a > max:
+        max = a
+        max_i = i
+    a = int(input())
+    i += 1
+print(max_i)
+
+
+ 06_11_seq_num_even.py
+N = 0
+a = int(input())
+while a != 0:
+    if a % 2 == 0:
+        N += 1
+    a = int(input())
+print(N)
+
+
+ 06_12_seq_increasing_neighbours.py
+c = 0
+b = int(input())
+a = b
+while b != 0:
+    if b > a:
+       c += 1
+    a = b
+    b = int(input())
+print(c)
+
+
+ 06_13_seq_second_max.py
+max_2 = -1
+a = int(input())
+max = 0
+while a != 0:
+    if a > max:
+        max_2 = max
+        max = a
+    elif a > max_2:
+        max_2 = a
+    a = int(input())
+print(max_2)
+
+
+ 06_14_seq_num_maximal.py
+max = 0
+с = 1
+a = int(input())
+while a != 0:
+    if a > max:
+        max = a
+        с = 1
+    elif a == max:
+        с += 1
+    a = int(input())
+print(с)
+
+
+ 06_15_kth_fibonacci.py
+n = int(input())
+fi1 = 0
+fi2 = 1
+if n < 1:
+    print(0)
+elif n == 1:
+    print(1)
+else:
+    i = 2
+    while i <= n:
+        fi2, fi1 = fi1 + fi2, fi2
+        i += 1
+    print(fi2)
+    
+
+
+ 06_16_is_fibonacci.py
+A = int(input())
+fi1 = 0
+fi2 = 1
+if A == 1:
+    print(1)
+else:
+    i = 1
+    while A > fi2:
+        fi2, fi1 = fi1 + fi2, fi2
+        i += 1
+    if A == fi2:
+        print(i)
+    else:
+        print(-1)
+
+
+ 06_16_seq_max_chunk_of_repetitions.py
+chunk = 1
+max_chunk = 1
+a = int(input())
+b = a
+while b != 0:
+    b, a = int(input()), b
+    if b == a:
+        chunk += 1
+    else:
+        if chunk > max_chunk:
+            max_chunk = chunk
+        chunk = 1
+print(max_chunk)
+
+
+ 06_17_std_dev.py
+from math import sqrt
+
+partial_sum = 0
+partial_sum_squares = 0
+x_i = int(input())
+n = 0
+while x_i != 0:
+    n += 1
+    partial_sum += x_i
+    partial_sum_squares += x_i ** 2
+    x_i = int(input())
+print(sqrt((partial_sum_squares - partial_sum ** 2 / n) / (n - 1)))
+
+
+ 07_01_even_indices.py
+print(' '.join(input().split()[::2]))
+
+
+ 07_02_even_elements.py
+for elem in [int(s) for s in input().split()]:
+    if elem % 2 == 0:
+        print(elem, end=' ')
+
+
+ 07_03_increasing_neighbours.py
+a = [int(s) for s in input().split()]
+for i in range(1, len(a)):
+    if a[i] > a[i-1]:
+        print(a[i], end=' ')
+
+
+ 07_04_same_sign_neighbours.py
+a = [int(s) for s in input().split()]
+for i in range(1, len(a)):
+    if a[i] * a[i-1] > 0:
+        print(a[i-1], a[i], end=' ')
+        break
+
+
+ 07_05_more_than_neighbours.py
+a = [int(s) for s in input().split()]
+с = 0
+for i in range(1, len(a)-1):
+    if a[i - 1] < a[i] > a[i + 1]:
+        с += 1
+print(с)
+
+
+ 07_06_maximal_element.py
+a = [int(s) for s in input().split()]
+maximum = a[0]
+max_i = 0
+for i in range(1, len(a)):
+    if a[i] > maximum:
+        max_i = i
+        maximum = a[i]
+print(maximum, max_i, end=' ')
+
+
+
+ 07_07_lineup.py
+heights = [int(i) for i in input().split()]
+peters_height = int(input())
+pos = len(heights) + 1
+for i in range(len(heights)):
+    if peters_height > heights[i]:
+        pos = i + 1
+        break
+print(pos)
+
+
+
+
+ 07_08_num_distinct.py
+a = [int(i) for i in input().split()]
+num_of_diff = 1
+for i in range(1,len(a)):
+    if a[i] > a[i-1]:
+        num_of_diff += 1
+print(num_of_diff)
+
+
+ 07_09_swap_neighbours.py
+a = [int(i) for i in input().split()]
+for i in range(0,len(a)-1,2):
+    a[i], a[i+1] = a[i+1], a[i]
+print(' '.join([str(i) for i in a]))
+
+
+
+ 07_10_swap_min_and_max.py
+index_of_max = 0
+index_of_min = 0
+a = [int(i) for i in input().split()]
+for i in range(1, len(a)):
+    if a[i] > a[index_of_max]:
+        index_of_max = i
+    if a[i] < a[index_of_min]:
+        index_of_min = i
+a[index_of_max], a[index_of_min] = a[index_of_min], a[index_of_max]
+print(' '.join([str(i) for i in a]))
+
+
+
+ 07_11_remove_element.py
+a = [int(i) for i in input().split()]
+k = int(input())
+a = a[:k]+a[k+1:]
+print(' '.join([str(i) for i in a]))
+
+
+
+ 07_12_insert_element.py
+a = [int(i) for i in input().split()]
+k, C = [int(i) for i in input().split()]
+a = a[:k] + [C] + a[k:]
+print(' '.join([str(i) for i in a]))
+
+
+
+
+
+
+ 07_13_num_equal_pairs.py
+a = [int(s) for s in input().split()]
+counter = 0
+for i in range(len(a)):
+    for j in range(i + 1, len(a)):
+        if a[i] == a[j]:
+            counter += 1
+print(counter)
+
+
+
+ 07_14_unique_elements.py
+a = [int(s) for s in input().split()]
+uniqs = []
+for elem in a:
+    if a.count(elem) == 1:
+        uniqs.append(elem)
+print(' '.join([str(i) for i in uniqs]))
+
+
+
+ 07_15_kegelbahn.py
+N, K = [int(i) for i in input().split()]
+kegels = ['I'] * N
+for j in range(K):
+    l, r = [int(i) for i in input().split()]
+    kegels[l-1:r] = ['.'] * (r-l+1)
+print(''.join([str(i) for i in kegels]))
+
+
+
+ 07_16_lists_queens.py
+N = 8
+result = 'NO'
+x = [0] * N
+y = [0] * N
+for i in range(N):
+    x[i], y[i] = [int(j) for j in input().split()]
+for i in range (N):
+    for j in range(i+1,N):
+        if x[i] == x[j] or y[i] == y[j] or abs(x[i] - x[j]) == abs(y[i] - y[j]):
+            result = 'YES'
+print(result)
+
+
+
+ 08_01_length_of_segment.py
+def distance(x1, y1, x2, y2):
+    from math import sqrt
+    return sqrt((x1-x2)**2+(y1-y2)**2)
+    
+x1 = float(input())
+y1 = float(input())
+x2 = float(input())
+y2 = float(input())
+print(distance(x1, y1, x2, y2))
+
+
+ 
+ 08_02_negative_power.py
+def power(a, n):
+    res = 1
+    for i in range(abs(n)):
+        res *= a
+    if n >= 0:
+        return res
+    else:
+        return 1 / res
+
+print(power(float(input()), int(input())))
+
+
+ 08_03_capitalize.py
+def capitalize(word):
+    return chr(ord(word[0]) + ord('A') - ord('a')) + word[1:]
+    
+s = [str(s) for s in input().split()]
+for i in range(len(s)):
+    s[i] = capitalize(s[i])
+print(' '.join([str(i) for i in s]))
+
+
+
+
+ 08_04_power_rec.py
+def power(a, n):
+    if n == 0:
+        return 1
+    else:
+        return a * power(a, n - 1)
+
+print(power(float(input()), int(input())))
+
+
+ 08_05_reverse_rec.py
+def reverse():
+    a = int(input())
+    if a != 0:
+        reverse()
+    print(a)
+
+reverse()
+
+
+
+ 08_06_fibonacci_rec.py
+def fib(n):
+    if n == 1 or n == 2:
+        return 1
+    else:
+        return fib(n - 1) + fib(n - 2)
+
+print(fib(int(input())))
+
+
+
+ 09_01_2d_max.py
+n, m = [int(j) for j in input().split()]
+a = [[int(j) for j in input().split()] for i in range(n)]
+max_row = 0
+max_col = 0
+max = a[max_row][max_col]
+for i in range(n):
+    for j in range(m):
+        if max < a[i][j]:
+            max = a[i][j]
+            max_row = i
+            max_col = j
+print(max_row, max_col)
+
+
+
+ 09_02_chessboard.py
+def chessboard(n, m):
+    if (n + m) % 2 == 0:
+        return '.'
+    else:
+        return '*'
+
+n, m = [int(j) for j in input().split()]
+a = [[chessboard(i, j) for j in range(m)] for i in range(n)]
+for row in a:
+    print(' '.join(row))
+
+
+
+ 09_03_snowflake.py
+n = int(input())
+k = n // 2
+a = [['.'] * n for i in range(n)]
+for i in range(n):
+    a[k][i] = '*'
+    a[i][k] = '*'
+    a[i][i] = '*'
+    a[n-i-1][i] = '*'
+for row in a:
+    print(' '.join(row))
+
+
+
+ 09_04_diagonals.py
+n = int(input())
+a = [[abs(i - j) for j in range(n)] for i in range(n)]
+for row in a:
+    print(' '.join([str(i) for i in row]))
+
+
+
+ 09_05_secondary_diagonal.py
+n = int(input())
+a = [0] * n
+a = [[0] * (n - i - 1) + [1] + [2] * i for i in range(n)]
+for row in a:
+    print(' '.join([str(i) for i in row]))
+
+
+
+ 09_06_swap_columns.py
+def swap_columns(a, i, j):
+    for row in a:
+        row[i], row[j] = row[j], row[i]
+    return a
+
+n, m = [int(k) for k in input().split()]
+a = [[int(j) for j in input().split()] for i in range(n)]
+i, j = [int(k) for k in input().split()]
+for row in swap_columns(a, i, j):
+    print(' '.join([str(i) for i in row]))
+
+
+ 10_01_number_of_unique.py
+print(len(set(input().split())))
+
+
+ 10_02_number_of_coincidental.py
+print(len(set(input().split()) & set(input().split())))
+
+
+ 10_03_sets_intersection.py
+print(*sorted(set(input().split()) & set(input().split()), key=int))
+
+
+
+ 10_04_occurs_before.py
+a = input().split()
+for i in range(len(a)):
+    if a[i] in a[:i]:
+        print('YES')
+    else:
+        print('NO')
+
+
+
+ 10_05_cubes.py
+n, m = [int(j) for j in input().split()]
+A = set()
+B = set()
+for i in range(n):
+    A.add(int(input()))
+for i in range(m):
+    B.add(int(input()))
+C = A & B
+D = A - B
+Е = B - A
+print(len(C))
+print(*sorted(C), key=int)
+print(len(D))
+print(*sorted(D), key=int)
+print(len(Е))
+print(*sorted(Е), key=int)
+
+
+ 10_06_number_of_words.py
+n = int(input())
+a = [[j for j in input().split()] for i in range(n)]
+print(len(set(sum(a, []))))
+
+
+
+
+ 10_07_guess_number.py
+n = int(input())
+a = [i for i in range(1,n+1)]
+s = set(a)
+while True:
+    guess = input()
+    if guess == 'HELP':
+        break
+    answer = input()
+    if answer == 'NO':
+        s -= set(guess.split())
+    elif answer == 'YES':
+        s &= set(guess.split())
+print(' '.join([str(i) for i in list(s)]))
+
+
+
+ 10_08_guess_number_2.py
+n = int(input())
+all_nums = set(range(1, n + 1))
+possible_nums = all_nums
+while True:
+    guess = input()
+    if guess == 'HELP':
+        break
+    guess = {int(x) for x in guess.split()}
+    if len(possible_nums & guess) > len(possible_nums) / 2:
+        print('YES')
+        possible_nums &= guess
+    else:
+        print('NO')
+        possible_nums &= all_nums - guess
+        
+print(' '.join([str(x) for x in sorted(possible_nums)]))
+
+
+
+ 10_09_polyglotes.py
+n = int(input()) # количество учеников
+lang_nums = [0] * n # количество языков для каждого ученика
+langs = []  # наименования языков, для каждого из учеников
+for i in range(n):
+    lang_nums[i] = int(input())
+    l = set()
+    for j in range(lang_nums[i]):
+        l.add(input())
+    langs.append(l)
+uni = set.union(*langs)
+inter = set.intersection(*langs)
+print(len(inter), '\n'.join(sorted(inter)), len(uni), '\n'.join(sorted(uni)), sep='\n')
+
